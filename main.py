@@ -21,9 +21,8 @@ from triggers import *
 from models import *
 
 
-#create instances of attack and defense parameters defined in parameters.py
+#create instance of attack arameters defined in parameters.py
 attack = Attack()
-defence = Defense()
 
 #create directory results and subdirectories based on attack.alfa
 res_dir = 'results'
@@ -44,14 +43,11 @@ x_train = np.expand_dims(x_train, -1)
 x_val = np.expand_dims(x_val, -1)
 x_test = np.expand_dims(x_test, -1)
 
-#create a copy for the defender from the benign test dataset
-x_test_for_defence = np.copy(x_test)
-
 
 #create CNN used for the experiment
 model = lenet5(input_shape=input_shape, nb_classes=nb_classes, drop=False)
 
-# pack necessary parameters for attack and defence
+# pack necessary parameters for attack
 args_attack = {'res_dir': res_dir, 'subdir_name': subdir_name, 'x_train': x_train,
                'y_train': y_train, 'x_val': x_val, 'y_val': y_val, 'x_test': x_test, 'y_test': y_test, 'model': model,
                'attack': attack}
