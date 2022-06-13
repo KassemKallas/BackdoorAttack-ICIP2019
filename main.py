@@ -24,8 +24,7 @@ from models import *
 #create instance of attack arameters defined in parameters.py
 attack = Attack()
 
-#create directory results and subdirectories based on attack.alfa
-res_dir = 'results'
+res_dir = './'
 isExist = os.path.exists(res_dir)
 if not isExist:
   os.mkdir(res_dir)
