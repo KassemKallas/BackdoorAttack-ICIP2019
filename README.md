@@ -3,7 +3,15 @@ Backdoor attacks against CNNs represent a new threat against deep learning syste
 
 # Files
 main.py is the main of the code
+
+
 models.py contains the CNN models
+
+
 parameters.py is to set the simulation parameters
+
+
 trigger.py contains the three triggers used as backdoor in the paper
+
+
 utils.py contains all the functions and methods needed, including the backdoor training
